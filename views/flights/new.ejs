@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Enter a New Flight</title>
 </head>
-
 <body>
 
-	<h2>Enter a New flight</h2>
+	<h2>Enter a New Flight</h2>
 	<form action="/flights" method="POST">
-		<label>Title:
-			<input type="text" name="title">
-		</label><br>
-		<label>Release Year:
-			<input type="number" name="releaseYear">
-		</label><br>
-		<label>MPAA Rating
-			<select name="mpaaRating">
-				<option value="G">G</option>
-				<option value="PG">PG</option>
-				<option value="PG-13">PG-13</option>
-				<option value="R">R</option>
-			</select>
-		</label><br>
-		<label>Cast (separate actors with commas):
-			<input type="text" name="cast">
-		</label><br>
-		<label>Now Showing:
-			<input type="checkbox" name="nowShowing" checked>
-		</label><br>
-		<button type="submit">Add Movie</button>
+		<label for="airline">Airline:</label>
+		<select name="airline" id="airline">
+			<option value="American">American</option>
+			<option value="Southwest">Southwest</option>
+			<option value="United">United</option>
+		</select><br>
+
+		<label for="airport">Airport:</label>
+		<select name="airport" id="airport">
+			<option value="AUS">AUS</option>
+			<option value="DFW">DFW</option>
+			<option value="DEN">DEN</option>
+			<option value="LAX">LAX</option>
+			<option value="SAN">SAN</option>
+		</select><br>
+
+		<label for="flightNo">Flight No:</label>
+		<input type="number" name="flightNo" id="flightNo" min="10" max="9999" required><br>
+
+		<label for="departs">Departs:</label>
+		<input type="date" name="departs" id="departs"><br>
+
+		<button type="submit">Add Flight</button>
 	</form>
 
 </body>
-
 </html>
